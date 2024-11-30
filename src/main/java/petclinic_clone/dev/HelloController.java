@@ -1,4 +1,4 @@
-package com.petclinic_clone.dev;
+package petclinic_clone.dev;
 
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.web.bind.annotation.*;
