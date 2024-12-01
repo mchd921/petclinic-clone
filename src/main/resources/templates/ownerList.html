@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>本の一覧表示</title>
+</head>
+<body>
+    <table>
+        <tr th:each="owner : ${ownerList}" th:object="${owner}">
+            <td th:text="*{id}"></td>
+            <td th:text="*{first_name}"></td>
+            <td th:text="*{last_name}"></td>
+            <td th:text="*{address}"></td>
+            <td th:text="*{city}"></td>
+            <td th:text="*{telephone}"></td>
+        </tr>
+    </table>
+</body>
+</html>
