@@ -16,11 +16,19 @@ public class OwnerService {
     @Autowired
     OwnerRepository repository;
 
-    /**
-     * データベースからOwnerの一覧を取得する
-     * @return
-     */
     public List<Owner> findAll() {
         return repository.findAll();
+    }
+
+    public Owner findById(Integer id) {
+        return repository.findById(id).orElse(null);
+    }
+
+    public Owner save(Owner owner) {
+        return repository.save(owner);
+    }
+
+    public void deleteById(Integer id) {
+        repository.deleteById(id);
     }
 }
